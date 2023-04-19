@@ -14,6 +14,7 @@
 		C025D2EE29EFC9EC001AA83C /* Pedometer_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025D2ED29EFC9EC001AA83C /* Pedometer_SwiftTests.swift */; };
 		C025D2F829EFC9EC001AA83C /* Pedometer_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025D2F729EFC9EC001AA83C /* Pedometer_SwiftUITests.swift */; };
 		C025D2FA29EFC9EC001AA83C /* Pedometer_SwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C025D2F929EFC9EC001AA83C /* Pedometer_SwiftUITestsLaunchTests.swift */; };
+		C025D30829EFCA89001AA83C /* rounded-x-mgenplus-1c-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C025D30729EFCA88001AA83C /* rounded-x-mgenplus-1c-medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,9 @@
 		C025D2F329EFC9EC001AA83C /* Pedometer-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pedometer-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C025D2F729EFC9EC001AA83C /* Pedometer_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedometer_SwiftUITests.swift; sourceTree = "<group>"; };
 		C025D2F929EFC9EC001AA83C /* Pedometer_SwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pedometer_SwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C025D30729EFCA88001AA83C /* rounded-x-mgenplus-1c-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rounded-x-mgenplus-1c-medium.ttf"; sourceTree = "<group>"; };
+		C025D30929EFCA8F001AA83C /* Pedometer-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Pedometer-Swift.entitlements"; sourceTree = "<group>"; };
+		C025D30A29EFCAA9001AA83C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +98,12 @@
 		C025D2DB29EFC9EB001AA83C /* Pedometer-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				C025D30A29EFCAA9001AA83C /* Info.plist */,
+				C025D30929EFCA8F001AA83C /* Pedometer-Swift.entitlements */,
 				C025D2DC29EFC9EB001AA83C /* Pedometer_SwiftApp.swift */,
 				C025D2DE29EFC9EB001AA83C /* ContentView.swift */,
 				C025D2E029EFC9EC001AA83C /* Assets.xcassets */,
+				C025D30629EFCA5F001AA83C /* Fonts */,
 				C025D2E229EFC9EC001AA83C /* Preview Content */,
 			);
 			path = "Pedometer-Swift";
@@ -125,6 +132,14 @@
 				C025D2F929EFC9EC001AA83C /* Pedometer_SwiftUITestsLaunchTests.swift */,
 			);
 			path = "Pedometer-SwiftUITests";
+			sourceTree = "<group>";
+		};
+		C025D30629EFCA5F001AA83C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C025D30729EFCA88001AA83C /* rounded-x-mgenplus-1c-medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C025D30829EFCA89001AA83C /* rounded-x-mgenplus-1c-medium.ttf in Resources */,
 				C025D2E429EFC9EC001AA83C /* Preview Assets.xcassets in Resources */,
 				C025D2E129EFC9EC001AA83C /* Assets.xcassets in Resources */,
 			);
@@ -414,11 +430,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pedometer-Swift/Pedometer-Swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pedometer-Swift/Preview Content\"";
+				DEVELOPMENT_TEAM = SRS3MC6VWH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pedometer-Swift/Info.plist";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Permission required to get step counts.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Permission required to get step counts.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Permission required to get step counts.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -429,7 +451,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "gaimo.ch.Pedometer-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "gaimo.ch.Pedometer-Swift-20230419";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -442,11 +464,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pedometer-Swift/Pedometer-Swift.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pedometer-Swift/Preview Content\"";
+				DEVELOPMENT_TEAM = SRS3MC6VWH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pedometer-Swift/Info.plist";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Permission required to get step counts.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Permission required to get step counts.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Permission required to get step counts.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,7 +485,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "gaimo.ch.Pedometer-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "gaimo.ch.Pedometer-Swift-20230419";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
